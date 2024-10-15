@@ -1,0 +1,5 @@
+(and (or q (not r))
+     (or (not p) r)
+     (or (not q) r p)
+     (or p q (not q))
+     (or (not r) q))
