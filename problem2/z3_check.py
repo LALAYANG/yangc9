@@ -8,7 +8,7 @@ psi = q
 
 solver = Solver()
 
-# Task 1: Check if φ is satisfiable
+# Task 1: Check if phi is satisfiable
 solver.add(phi)
 if solver.check() == sat:
     print(f"{phi} is satisfiable")
@@ -23,10 +23,10 @@ if solver.check() == sat:
 else:
     print(f"{psi} is not satisfiable")
 
-# Task 2: Check if φ and ψ are equivalent
+# Task 2: Check if phi and psi are equivalent
 solver.reset()
 solver.add(phi == psi)
 if solver.check() == sat:
-    print("φ and ψ are equivalent")
+    print("phi and psi are equivalent")
 else:
-    print("φ and ψ are not equivalent")
+    print("phi and psi are not equivalent")
