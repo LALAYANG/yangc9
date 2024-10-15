@@ -1,0 +1,22 @@
+yang@maverick:~/new/logictools/resolution$ python3 resolution.py 
+Enter the formula in CNF
+Example: {x, y, z} {!x, y, z}. ! Denotes a negated literal
+{p} {!p,q} {!q}
+
+Apply resolution rules by providing clause numbers and the literal on which you want to resolve, e.g.
+1:{x, y} 2:{!x, z}
+>> 1 2 x
+1:{y, z}
+Enter 'b' to backtrack, and 'done' to indicate that you have saturated resolution steps.
+Enter 'help' to display this message.
+
+1:{p} 2:{!p, q} 3:{!q}
+>> 1 2 p
+
+1:{p} 2:{!p, q} 3:{!q} 4:{q}
+>> 3 4 q
+
+1:{p} 2:{!p, q} 3:{!q} 4:{q} 5:{}
+>> done
+Enter the name of the file where you want to save your proof. If you press Enter, it will be saved to proof.json
+p1.json
